@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+https://go.microsoft.com/fwlink/?LinkID=208121.
+-->
+<Project>
+  <PropertyGroup>
+    <_PublishTargetUrl>C:\Users\sanch\source\repos\TestProjects\MSChud\MSChud\bin\Release\net7.0\publish\</_PublishTargetUrl>
+    <History>True|2023-11-25T19:53:45.2057071Z;True|2023-11-25T22:29:33.1045931+03:00;True|2023-11-25T21:25:39.6459452+03:00;</History>
+    <LastFailureDetails />
+  </PropertyGroup>
+</Project>

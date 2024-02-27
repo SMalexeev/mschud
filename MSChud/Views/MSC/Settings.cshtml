@@ -1,0 +1,132 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    Layout = null;
+}
+@using MSChud.Models
+@model PlayerNeeds
+<link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+<link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+
+<script src="~/js/signalr.js"></script>
+<script src="~/js/controllerhub.js"></script>
+
+<body class="panel w-auto h-auto">
+    <div class="admin-panel">
+        <div>
+            <span>Жажда:</span>
+            <span id="thirstCount">@PlayerNeeds.Thirst </span>
+            <br />
+            <button onclick="thirstminus1()">-1</button>
+            <button onclick="thirstminus10()">-10</button>
+            <button onclick="thirst0()">0</button>
+            <button onclick="thirst1()">+1</button>
+            <button onclick="thirst10()">+10</button>
+            <button onclick="thirst100()">100</button>
+            <br />
+            <input id="thirstValue" value="0" type="number" min="0" max="100" />
+            <button onclick="thirstCustom()">Ввести</button>
+        </div>
+        <div>
+            <span>Голод:</span>
+            <span id="hungerCount">@PlayerNeeds.Hunger</span>
+            <br />
+            <button onclick="hungerminus1()">-1</button>
+            <button onclick="hungerminus10()">-10</button>
+            <button onclick="hunger0()">0</button>
+            <button onclick="hunger1()">+1</button>
+            <button onclick="hunger10()">+10</button>
+            <button onclick="hunger100()">100</button>
+            <br />
+            <input id="hungerValue" value="0" type="number" min="0" max="100" />
+            <button onclick="hungerCustom()">Ввести</button>
+        </div>
+        <div>
+            <span>Стресс: </span>
+            <span id="stressCount">@PlayerNeeds.Stress </span>
+            <br />
+            <button onclick="stressminus1()">-1</button>
+            <button onclick="stressminus10()">-10</button>
+            <button onclick="stress0()">0</button>
+            <button onclick="stress1()">+1</button>
+            <button onclick="stress10()">+10</button>
+            <button onclick="stress100()">100</button>
+            <br />
+            <input id="stressValue" value="0" type="number" min="0" max="100" />
+            <button onclick="stressCustom()">Ввести</button>
+        </div>
+        <div>
+            <span>Нужда: </span>
+            <span id="urineCount">@PlayerNeeds.Urine </span>
+            <br />
+            <button onclick="urineminus1()">-1</button>
+            <button onclick="urineminus10()">-10</button>
+            <button onclick="urine0()">0</button>
+            <button onclick="urine1()">+1</button>
+            <button onclick="urine10()">+10</button>
+            <button onclick="urine100()">100</button>
+            <br />
+            <input id="urineValue" value="0" type="number" min="0" max="100" />
+            <button onclick="urineCustom()">Ввести</button>
+        </div>
+        <div>
+            <span>Усталость: </span>
+            <span id="fatigueCount">@PlayerNeeds.Fatigue </span>
+            <br />
+            <button onclick="fatigueminus1()">-1</button>
+            <button onclick="fatigueminus10()">-10</button>
+            <button onclick="fatigue0()">0</button>
+            <button onclick="fatigue1()">+1</button>
+            <button onclick="fatigue10()">+10</button>
+            <button onclick="fatigue100()">100</button>
+            <br />
+            <input id="fatigueValue" value="0" type="number" min="0" max="100" />
+            <button onclick="fatigueCustom()">Ввести</button>
+        </div>
+        <div>
+            <span>Гигиена</span>
+            <span id="dirtinessCount">@PlayerNeeds.Dirtiness </span>
+            <br />
+            <button onclick="dirtinessminus1()">-1</button>
+            <button onclick="dirtinessminus10()">-10</button>
+            <button onclick="dirtiness0()">0</button>
+            <button onclick="dirtiness1()">+1</button>
+            <button onclick="dirtiness10()">+10</button>
+            <button onclick="dirtiness100()">100</button>
+            <br />
+            <input id="dirtinessValue" value="0" type="number" min="0" max="100" />
+            <button onclick="dirtinessCustom()">Ввести</button>
+        </div>
+        <div>
+            <span>Деньги: </span>
+            <span id="moneyCount">@PlayerNeeds.Money</span>
+            <br />
+            <button onclick="minusmoney1000()">-1000</button>
+            <button onclick="minusmoney100()">-100</button>
+            <button onclick="minusmoney50()">-50</button>
+            <button onclick="money0()">0</button>
+            <button onclick="money50()">+50</button>
+            <button onclick="money100()">+100</button>
+            <button onclick="money1000()">+1000</button>
+            <br />
+            <input id="moneyValue" value="0" type="number" min="0" />
+            <button onclick="moneyCustom()">Ввести</button>
+        </div>
+        <div>
+            <span>Задача: </span>
+            <span id="taskTask">@PlayerNeeds.Task</span>
+            <br />
+            <input id="taskText" type="text" />
+            <button onclick="taskSet()">Ввести</button>
+        </div>
+        <!--
+        <div>
+            <span>Статус DA:</span>
+            <label></label>
+            <br/>
+            <button>Подключить DA</button>
+        </div>
+        -->
+    </div>
+</body>
